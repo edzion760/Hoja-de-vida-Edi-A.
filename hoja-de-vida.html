@@ -64,7 +64,7 @@
   aside ul { list-style: none; }
   .contact li { margin-bottom: 2.2mm; display: flex; gap: 2.5mm; align-items: flex-start; word-break: break-word; }
   .contact .ico { color: var(--accent); font-weight: 700; width: 4mm; flex: none; }
-  aside a { color: #dfe5ee; text-decoration: none; }
+  aside a, .project .meta a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 2px; }
 
   .skill-group { margin-bottom: 3mm; }
   .skill-group b { display: block; color: #fff; font-size: 8.4pt; margin-bottom: 1.2mm; }
@@ -154,7 +154,7 @@
   .logros li { display: flex; gap: 3mm; align-items: flex-start; }
   .logros .n { flex: none; width: 6mm; height: 6mm; border-radius: 50%; background: var(--accent); color: #fff;
                font-weight: 700; font-size: 8pt; display: flex; align-items: center; justify-content: center; }
-  .logros a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .logros a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -166,7 +166,7 @@
 
     <h3>Contacto</h3>
     <ul class="contact">
-      <li><span class="ico">✆</span>301 333 0505</li>
+      <li><span class="ico">✆</span><a href="https://wa.me/573013330505">301 333 0505</a></li>
       <li><span class="ico">@</span><a href="mailto:descargoycargo@gmail.com">descargoycargo@gmail.com</a></li>
       <li><span class="ico">⌂</span>San Gil, Santander — Colombia</li>
       <li><span class="ico">⟨⟩</span><a href="https://github.com/edzion760">github.com/edzion760</a></li>
@@ -177,28 +177,27 @@
     <h3>Habilidades técnicas</h3>
     <div class="skill-group">
       <b>Lenguajes</b>
-      <div class="tags"><span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span><span>SQL</span><span>Python (básico)</span></div>
+      <div class="tags"><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>SQL</span><span>Python (básico)</span></div>
     </div>
     <div class="skill-group">
-      <b>Frontend</b>
-      <div class="tags"><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>shadcn/ui</span></div>
+      <b>Backend</b>
+      <div class="tags"><span>API REST</span></div>
     </div>
     <div class="skill-group">
-      <b>Backend y datos</b>
-      <div class="tags"><span>Node.js</span><span>Express</span><span>Prisma ORM</span><span>API REST</span><span>JWT</span><span>SQLite</span><span>PostgreSQL</span></div>
+      <b>Automatización e IA</b>
+      <div class="tags"><span>n8n</span><span>Claude Code</span><span>Agentes de IA</span><span>WhatsApp</span></div>
     </div>
     <div class="skill-group">
       <b>Herramientas</b>
-      <div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Linux / VPS</span><span>Cloudflare</span><span>n8n</span><span>Claude Code</span></div>
+      <div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Cloudflare</span></div>
     </div>
 
     <h3>Nivel actual</h3>
-    <div class="level"><div class="row"><span>JavaScript / TypeScript</span><span>Intermedio</span></div><div class="bar"><i style="width:60%"></i></div></div>
-    <div class="level"><div class="row"><span>React</span><span>Intermedio</span></div><div class="bar"><i style="width:55%"></i></div></div>
-    <div class="level"><div class="row"><span>Node.js / Express</span><span>Intermedio</span></div><div class="bar"><i style="width:55%"></i></div></div>
+    <div class="level"><div class="row"><span>HTML5 / CSS3</span><span>Intermedio</span></div><div class="bar"><i style="width:60%"></i></div></div>
+    <div class="level"><div class="row"><span>JavaScript</span><span>Básico</span></div><div class="bar"><i style="width:40%"></i></div></div>
     <div class="level"><div class="row"><span>Git / GitHub</span><span>Intermedio</span></div><div class="bar"><i style="width:60%"></i></div></div>
+    <div class="level"><div class="row"><span>Automatización con n8n</span><span>Intermedio</span></div><div class="bar"><i style="width:60%"></i></div></div>
     <div class="level"><div class="row"><span>Desarrollo asistido por IA</span><span>Avanzado</span></div><div class="bar"><i style="width:80%"></i></div></div>
-
   </aside>
 
   <main>
@@ -224,11 +223,11 @@
       <h2>Proyecto destacado</h2>
       <div class="project">
         <h4>Descargo y Cargo — Marketplace de carga terrestre para Colombia</h4>
-        <div class="meta">Fundador y desarrollador · 2022 – actualidad · <b>descargoycargo.com</b> · github.com/edzion760</div>
+        <div class="meta">Fundador y desarrollador · 2022 – actualidad · <a href="https://www.descargoycargo.com"><b>descargoycargo.com</b></a> · <a href="https://github.com/edzion760">github.com/edzion760</a></div>
         <ul>
           <li>Plataforma web que conecta a transportadores con empresas que necesitan mover carga, validando que
               los precios publicados respeten el piso legal del <b>SICE-TAC</b> del Ministerio de Transporte.</li>
-          <li>Construí el flujo completo: registro con autenticación JWT, publicación de cargas, marketplace en vivo,
+          <li>Construí el flujo completo: registro de usuarios, publicación de cargas, marketplace en vivo,
               planes de membresía e integración de pagos con la pasarela <b>Wompi</b>.</li>
           <li>Añadí correo transaccional, notificaciones push geolocalizadas, recuperación de contraseña,
               términos y política de datos (Ley 1581) y derecho a eliminar la cuenta.</li>
@@ -237,7 +236,7 @@
           <li>Organicé y depuré una base de más de <b>4.000 contactos</b> del sector recopilados durante un año de
               trabajo de campo, para convertirlos en clientes potenciales.</li>
         </ul>
-        <div class="stack"><b>Stack:</b> React · TypeScript · Vite · Tailwind · Node.js · Express · Prisma · SQLite · Git · Claude Code</div>
+        <div class="stack"><b>Cómo lo hice:</b> desarrollo asistido por IA con Claude Code, control de versiones con Git/GitHub y despliegue con Cloudflare.</div>
       </div>
     </section>
 
@@ -286,7 +285,7 @@
       <h2>Logros</h2>
       <ul class="logros">
         <li><span class="n">1</span><div><b>Plataforma propia en producción:</b> <a href="https://www.descargoycargo.com">www.descargoycargo.com</a> — diseñada, programada y desplegada por mí; funciona 24/7 en un servidor propio con dominio, pagos en línea y correo transaccional.</div></li>
-        <li><span class="n">2</span><div><b>Automatización de procesos en Pvcentro con n8n:</b> diseñé flujos automáticos que conectan las herramientas del negocio y eliminan tareas manuales repetitivas, liberando tiempo del equipo para atender clientes.</div></li>
+        <li><span class="n">2</span><div><b>Agente de ventas con IA para Pvcentro:</b> automaticé con <b>n8n</b> y <b>Claude</b> un agente que atiende a los clientes por <b>WhatsApp</b> y responde sus preguntas sobre materiales de construcción liviana.</div></li>
         <li><span class="n">3</span><div><b>De la idea al producto:</b> validé Descargo y Cargo con más de 4.000 contactos del sector antes de escribir código, y aprobé la certificación de Claude Code de Anthropic para desarrollar con IA de forma responsable.</div></li>
       </ul>
     </section>
@@ -325,7 +324,7 @@
         <div class="where">Pvcentro · San Gil y Socorro, Santander</div>
         <ul>
           <li>Administración de la operación en dos sedes: ventas, inventario, proveedores y personal.</li>
-          <li>Crecimiento sostenido de la empresa durante casi una década de gestión.</li>
+          <li>Implementación de un agente de ventas con IA (n8n + Claude) que atiende clientes por WhatsApp.</li>
         </ul>
       </div>
 
